@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block content %} {% load static %} 
+    <div class="error">
+        <div class="text">
+            <h2>Error!!</h2>
+            <h4>Page not found</h4>
+        </div>
+        <div class="img-container">
+            <img src="{% static './images/pnf.jpg' %}" alt="Image">
+        </div>
+    </div>
+{% endblock %}

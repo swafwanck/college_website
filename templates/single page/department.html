@@ -1,0 +1,43 @@
+{% extends "base.html" %} {% block content %} {% load static %} 
+{% include 'web/includes/header.html' %}
+    <span class="overlay"></span>
+    <section id="teachers">
+      <div class="top">
+        <h1>Department Of {{deparment.short_title}}</h1>
+        <span>{{department.title}}</span>
+      </div>
+      <div class="wrapper">
+        <div class="hod">
+          <div class="main">
+            <div class="image-box">
+              <img src="{{department.image.url}}" alt="Bca-faisal" />
+            </div>
+            <div class="name">
+              <h4>{{department.name}}</h4>
+              <span>HOD OF {{department.short_title}}</span>
+            </div>
+          </div>
+          <div class="contact">
+            <a href="tel:{{department.number}}">
+              <small class="icon"><i class="fas fa-phone-alt"></i></small>
+              <small>Contact</small>
+            </a>
+          </div>
+        </div>
+        <ul class="profiles">
+          {% for teacher in teachers%}
+          <li>
+            <div class="image-box">
+              <img src="{{teacher.image.url}}" alt="{{teacher.name}}" />
+            </div>
+            <div class="name">
+              <h4>{{teacher.name}}</h4>
+              <span>{{teacher.designation}}</span>
+            </div>
+          </li>
+        {% endfor %%}
+        </ul>
+      </div>
+    </section>
+{% include 'web/includes/footer.html' %}
+{% endblock %}

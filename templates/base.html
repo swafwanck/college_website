@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <meta
+      name="keywords"
+      content="jne, Jamia Nadwiyya, jamianadwiyyaartscollege, jne arts college, jne arts college edavanna,
+     edavanna, jamia edavanna, jamiaedavanna, jamia edavanna, jnasc edavanna, 
+     jneartscollege, jamia nadwiyya arts college, jamia nadwiyya arts college edavanna"
+    />
+    <meta
+      name="description"
+      content="In an era , when Muslim community along with other marginalized
+      backward communities continued to exist in illiteracy and ignorance
+      , Jamia Nadwiyya laid its foundation in 1964 by Kerala  Nadvathul
+      Mujahideen (KNM) a socio- cultural – educational renaissance
+      movement in Kerala ."
+    />
+    <meta
+      property="og:description"
+      content="In an era , when Muslim community along with other marginalized
+      backward communities continued to exist in illiteracy and ignorance
+      , Jamia Nadwiyya laid its foundation in 1964 by Kerala  Nadvathul
+      Mujahideen (KNM) a socio- cultural – educational renaissance
+      movement in Kerala ."
+    />
+    <meta property="og:title" content="JNE Arts College" />
+    <meta property="og:image" sizes="16x16" content="{% static './images/og-icon.png' %}"
+    type=”image/png” />
+
+    <!-- links -->
+    <link rel="stylesheet" href="{% static './css/style.css' %}" />
+    <link rel="stylesheet" href="{% static './css/all.css' %}" />
+    <link rel="stylesheet" href="{% static './css/aos.css' %}" />
+    <link rel="stylesheet" href="{% static './css/slick-theme.css' %}" />
+    <link rel="stylesheet" href="{% static './css/slick.css' %}" />
+    <link rel="stylesheet" href="{% static './css/owl.carousel.min.css' %}" />
+    <link rel="stylesheet" href="{% static './css/owl.theme.default.min.css' %}" />
+    <link rel="stylesheet" href="{% static './css/swiper-bundle.min.css' %}" />
+    <script src="{% static './js/jquery-min.js' %}"></script>
+    <script src="{% static './js/aos.js' %}"></script>
+    <script src="{% static './js/slick.min.js' %}"></script>
+    <script src="{% static './js/owl.carousel.min.js' %}"></script>
+    <script src="{% static './js/swiper-bundle.min.js' %}"></script>
+    <script src="{% static './js/multi-animated-counter.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{% static './js/script.js' %}" defer></script>
+    <!-- favicon -->
+    <link rel="icon" sizes="16x16" href="{% static './images/favicon.png' %}" type="image/png" />
+  </head>
+  <body id="body">
+    {% block content %}{% endblock %}
+  </body>
+</html>

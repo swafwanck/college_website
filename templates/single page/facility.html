@@ -1,0 +1,36 @@
+{% extends "base.html" %} {% block content %} {% load static %} 
+{% include 'web/includes/header.html' %}
+      <span class="overlay"></span>
+    <section id="portfolio">
+      <section class="wrapper">
+        <nav class="container" style="background-image: url({{facilities.featured_image.url}})">
+          <h1>{{facilities.title}}</h1>
+        </nav>
+        <div class="staff">
+          <ul>
+            <li class="user">
+              <div class="icon">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="text">
+                <h5>{{facilities.staff_count}} Staff</h5>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </section>
+    <section id="gallery">
+
+      <div class="wrapper">
+        <ul>
+          {%for gallery in galleries %}
+          <li><img src="{{gallery.image.url}}" alt="{{facilities.title}}" /></li>
+          {% endfor %}
+        </ul>
+      </div>
+     
+    </section>
+{% include 'web/includes/footer.html' %}
+{% endblock %}
+    

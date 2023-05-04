@@ -1,0 +1,103 @@
+{% extends "base.html" %} {% block content %} {% load static %} 
+{% include 'web/includes/header.html' %}
+<section id="form">
+  <div class="wrapper">
+    <div class="head">
+      <h2>JNE Arts College</h2>
+      <h4>APPLICATION FORM FOR ADMISSION TO DEGREE/ PG COURSE</h4>
+    </div>
+    <div class="container" id="container">
+      <form
+        method="post"
+        action=""
+        class="ajax redirect"
+        enctype="multipart/form-data"
+      >
+        {% csrf_token %}
+        <div class="item">
+          <label for="{{form.fullname.id_for_label}}"
+            >{{form.full_name.label}}</label
+          >
+          {{form.full_name}}
+        </div>
+        <div class="item">
+          <label for="{{form.email.id_for_label}}">{{form.email.label}}</label>
+          {{form.email}}
+        </div>
+        <div class="item">
+          <label for="{{form.cap_id.id_for_label}}"
+            >{{form.cap_id.label}}</label
+          >
+          {{form.cap_id}}
+        </div>
+        <div class="item">
+          <label for="{{form.course.id_for_label}}"
+            >{{form.course.label}}</label
+          >
+          {{form.course}}
+        </div>
+        <div class="item">
+          <label for="{{form.dob.id_for_label}}">{{form.dob.label}}</label>
+          {{form.dob}}
+        </div>
+        <div class="item">
+          <label for="{{form.gender.id_for_label}}"
+            >{{form.gender.label}}</label
+          >
+          {{form.gender}}
+        </div>
+        <div class="item">
+          <label for="{{form.student_number.id_for_label}}"
+            >{{form.student_number.label}}</label
+          >
+          {{form.student_number}}
+        </div>
+        <div class="item">
+          <label for="{{form.father_name.id_for_label}}"
+            >{{form.father_name.label}}</label
+          >
+          {{form.father_name}}
+        </div>
+        <div class="item">
+          <label for="{{form.mother_name.id_for_label}}"
+            >{{form.mother_name.label}}</label
+          >
+          {{form.mother_name}}
+        </div>
+        <div class="item">
+          <label for="{{form.parent_number.id_for_label}}"
+            >{{form.parent_number.label}}</label
+          >
+          {{form.parent_number}}
+        </div>
+        <div class="item">
+          <label for="{{form.institution.id_for_label}}"
+            >{{form.institution.label}}</label
+          >
+          {{form.institution}}
+        </div>
+        <div class="item">
+          <label for="{{form.month_and_year.id_for_label}}"
+            >{{form.month_and_year.label}}</label
+          >
+          {{form.month_and_year}}
+        </div>
+        <div class="item">
+          <label for="{{form.course_selected_for_plus_two.id_for_label}}"
+            >{{form.course_selected_for_plus_two.label}}</label
+          >
+          {{form.course_selected_for_plus_two}}
+        </div>
+        <div class="item">
+          <label for="{{form.percentage_obtained.id_for_label}}"
+            >{{form.percentage_obtained.label}}</label
+          >
+          {{form.percentage_obtained}}
+        </div>
+
+        <input class="submit" type="submit" value="Submit" />
+      </form>
+    </div>
+  </div>
+</section>
+{% include 'web/includes/footer.html' %} {% endblock %}

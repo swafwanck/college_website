@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block content %} {% load static %} 
+{% include 'web/includes/header.html' %}
+      <span class="overlay"></span>
+    <section id="spotlight">
+        <div class="wrapper">
+            <div class="box">
+                <h1>{{events.name}}</h1>
+            </div>
+    </section>
+    <section id="sports">
+        <div class="wrapper">
+            <div class="content">
+                <h2>{{events.title}}</h2>
+                <ul>
+                    {% for gallery in event_gallery %}
+                    <li><img src="{{gallery.image.url}}" alt=""></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </section>
+    </div>
+{% include 'web/includes/footer.html' %}
+{% endblock %}

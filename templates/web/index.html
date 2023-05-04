@@ -1,0 +1,378 @@
+{% extends "base.html" %} {% block content %} {% load static %} 
+{% include 'web/includes/header.html' %}
+<span class="overlay"></span>
+<section id="home">
+  <main>
+    <div class="wrapper">
+      <div class="main-slider owl-carousel" data-aos="fade-up">
+        <div class="main-text">
+          <h1>JAMIA NADWIYYA ARTS AND SCIENCE COLLEGE</h1>
+          <span>DISCOVER JNE</span>
+        </div>
+        <div class="enroll">
+          <h1>How to enroll JNE</h1>
+          <ul>
+            <li><a href="#courses" class="button">View Courses</a></li>
+            <li>
+              <a href="tel:+919999999" class="button contact">Contact Office</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--scroll-top-button-->
+      <div class="scroll-top" id="btn-scroll" onclick="scrollTopBtn()">
+        <span><i class="fas fa-chevron-down"></i></span>
+      </div>
+    </div>
+  </main>
+</section>
+<!-- spotlight-end-here -->
+
+<section id="about">
+  <div class="wrapper">
+    <div class="content">
+      <div class="head wow fadeInUp">
+        <h3><span>Learn</span> About JNE</h3>
+      </div>
+
+      <p data-aos="fade-up">
+        In an era , when Muslim community along with other marginalized backward
+        communities continued to exist in illiteracy and ignorance , Jamia
+        Nadwiyya laid its foundation in 1964 by Kerala  Nadvathul Mujahideen
+        (KNM) a socio- cultural – educational renaissance movement in Kerala .
+        The vision of Jamia Nadwiyya is to develop into a NAAC accredited
+        institution having international standards by moulding proficient
+        academicians and professionals with creative idea, brilliant practical
+        knowledge and excellent communication skills upholding moral values. The
+        mission of Jamia Nadwiyya is to facilitate graduate and post graduate
+        studies in Arabic language and literature, social science and modern
+        science as well as to provide academic atmosphere for teaching, learning
+        and doing research in an array of fields by recognizing the needs and
+        challenges of the times. Jamia Nadwiyya was started with the Sharia
+        college offering various B A and M A courses later offered hadith
+        institute. JN Arts and Science College imparts modern education along
+        with moral and spiritual values. Now Jamia Nadwiyya have many another
+        institutions.
+        <span>Thank You</span>
+      </p>
+    </div>
+  </div>
+</section>
+<!-- about-section-end -->
+
+<section id="info-box">
+  <div class="wrapper">
+    <ul class="boxes">
+      {% for college_detail in college_details %}
+      <li id="counters_1" data-aos="flip-up" data-aos-duration="1000">
+        <span><i class="{{college_detail.icon}}"></i></span>
+        <div class="bxt">
+          <h3
+            class="students counter"
+            data-TargetNum="{{college_detail.count}}"
+          >
+            0
+          </h3>
+          <h4>+</h4>
+        </div>
+        <p>{{college_detail.title}}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    <div class="welcome-box">
+      <h3 data-aos="fade-up-right">Welcome To JNE</h3>
+    </div>
+  </div>
+</section>
+<!-- info-section-end -->
+
+<section id="leaders">
+  <div class="content">
+    <div class="wrapper">
+      <div class="head">
+        <h3><span>Our </span>Leaders</h3>
+      </div>
+      <div class="pricipal">
+        <div class="profile">
+          <img
+            src="{% static './images/Principal-seethikoya.jpg' %}"
+            alt="Seethikoya"
+          />
+        </div>
+        <div class="quote">
+          <div class="name" data-aos="fade-up">
+            <h3>SEETHIKOYA</h3>
+            <span>PRINCIPAL</span>
+          </div>
+          <p data-aos="fade-up" data-aos-delay="50">
+            I would like to welcome everyone to JNE Arts College! It is a
+            privilege to serve as Principal of JNE Arts College and work with
+            such a dedicated and professional staff. Our college has an
+            outstanding reputation, and I am proud to be part of such a
+            wonderful community. JNE Arts College is filled with enthusiastic
+            students willing to learn, supportive families interested in their
+            children's education, and a dedicated professional staff committed
+            to providing the students with the highest quality education.
+          </p>
+          <small class="right"><i class="fas fa-quote-right"></i></small>
+        </div>
+      </div>
+      <div class="pricipal vice">
+        <div class="profile">
+          <img src="{% static './images/Principal.JPG' %}" alt="Preetha" />
+        </div>
+        <div class="quote">
+          <div class="name" data-aos="fade-up">
+            <h3>PREETHA K</h3>
+            <span>VICE PRINCIPAL</span>
+          </div>
+          <p data-aos="fade-up" data-aos-delay="50">
+            As a Vice-Principal here, I never considers as it my job, It's my
+            happiness it's my believe . To spread light in thousands of students
+            life, we gave you wings of excellence for achieving your goals. We
+            dream a goal, Plan for that action and spread in to reality. With
+            oceans of love we open a door of success to become a part with us!
+          </p>
+          <small class="left"><i class="fas fa-quote-right"></i></small>
+        </div>
+      </div>
+      <ul class="persons">
+        <li class="chairman" data-aos="fade-up" data-aos-duration="3000">
+          <div class="info">
+            <h3>T.P Abdullakkoya Madani</h3>
+            <span>CHAIRMAN</span>
+          </div>
+        </li>
+        <li class="trustee" data-aos="fade-up" data-aos-duration="3000">
+          <div class="info">
+            <h3>Noor Muhammed Noorsha</h3>
+            <span>MANAGING TRUSTEE</span>
+          </div>
+        </li>
+        <li class="vice-chairman" data-aos="fade-up" data-aos-duration="3000">
+          <div class="info">
+            <h3>P.V Arif</h3>
+            <span>VICE CHAIRMAN</span>
+          </div>
+        </li>
+        <li class="trust-board" data-aos="fade-up" data-aos-duration="3000">
+          <div class="info">
+            <h3>Dr.Fazalulla Anvari</h3>
+            <span>SECRETARY TRUST BOARD</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section id="news">
+  <div class="wrapper">
+    <div class="heading">
+      <h3><span>What's </span>New!!</h3>
+    </div>
+    <div class="notice-board">
+    {% for college_update in college_news %}
+      <div class="notice-item" data-aos="zoom-in-up">
+        <a href="#">
+          <div class="preview">
+            <img src="{% static './images/news-icon.png'%}" alt="Skills" />
+          </div>
+          <div class="content">
+            <h4>{{college_update.title}}</h4>
+            <span>{{college_update.description}}</span
+            >
+            <p>{{college_update.event_update}}</p>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="name-box">
+      <hr />
+      <h4>Latest Events</h4>
+      <hr />
+    </div>
+    <ul class="latest">
+        {% for latest_event in latest_events%}
+      <li class="item-box">
+        <a href="javascript:void(0)">
+          <div class="box">
+            <img
+              src="{{latest_event.image.url}}"
+              alt="Website- Launching"
+            />
+          </div>
+          <div class="info">
+            <h6>{{latest_event.title}}</h6>
+            <span>{{latest_event.event_date}}</span>
+          </div>
+        </a>
+      </li>
+{% endfor %}
+    </ul>
+    <span class="circle"></span>
+  </div>
+</section>
+<!-- news-section-end -->
+
+<section id="courses">
+  <div class="wrapper">
+    <div class="head">
+      <h1><span>Course we </span>Offer</h1>
+    </div>
+    <ul class="items">
+        {% for department in departments %}
+      <li>
+        <div class="main">
+          <h1>{{department.short_title}}</h1>
+          <p>{{department.title}}</p>
+        </div>
+        <div class="bottom">
+          <span>{{department.year}}</span>
+          <a href="department/{{department.id}}" class="button"
+            ><span class="arrow"><i class="fas fa-arrow-right"></i></span
+          ></a>
+        </div>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+</section>
+<!-- course-section-end -->
+
+<section id="facilities">
+  <div class="wrapper">
+    <div class="head">
+      <div class="head">
+        <h3><span>Our </span>Facilities</h3>
+      </div>
+    </div>
+    <div class="content">
+      <div class="box">
+        <a href="https://talrop.com" target="_blank" class="item">
+          <h4>Techies Park</h4>
+        </a>
+      </div>
+      <ul class="card">
+        {%for facility in facilities%}
+        <li class="library" style="background-image: url({{facility.featured_image.url}})">
+          <a href="facility/{{facility.id}}" target="_blank">
+            <h4>{{facility.title}}</h4>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- facilities-section-end -->
+
+<section id="testimonial">
+  <div class="wrapper">
+    <div class="head">
+      <h1><span>Our </span>Happy Students</h1>
+    </div>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        {% for testimonial in testimonials %}
+        <div class="swiper-slide">
+          <div class="top">
+            <img src="{% static './images/quote.png' %}" alt="Quote" />
+          </div>
+          <div class="content">
+            <!-- <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Architecto laboriosam exercitationem repellendus veniam
+                  explicabo labore, sint
+                </p> -->
+            <div class="person-box">
+              <div class="img-box">
+                <img
+                  src="{{testimonial.image.url}}"
+                  alt="Faheem"
+                />
+              </div>
+              <div class="text-box">
+                <h5>{{testimonial.name}}</h5>
+                <span>{{testimonial.designation}} <small>{{testimonial.company}}.</small></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+<!-- testimonial-end -->
+
+<section id="gallery">
+  <div class="wrapper">
+    <div class="head">
+      <h1>Gallery</h1>
+    </div>
+    <div class="content-box">
+      {% for event in events %}
+      <div class="items wow fadeInUp">
+        <a href="event/{{event.id}}" target="_blank">
+          <div class="top">
+            <img src="{{event.featured_image.url}}" alt="{{event.name}}" />
+          </div>
+          <div class="bottom">
+            <h2>{{event.name}}</h2>
+          </div>
+        </a>
+      </div>
+     {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- galley-section-end -->
+<section id="enroll-button">
+  <div class="wrapper">
+    <div class="entoll-img">
+      <img src="{% static './images/Checklist.jpg' %}" alt="Entrolling" />
+    </div>
+    <div class="content">
+      <div class="text-box">
+        <p>For admission enquiry enroll here!</p>
+      </div>
+      <div class="enroll-btn">
+        <a href="{% url 'web:form' %}" target="_blank"><small
+            ><img src="{% static './images/pen.png' %}" alt="Pen"
+          /></small>
+          <span>Enroll Now !</span></a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="developers">
+  <div class="wrapper">
+    <div class="head">
+      <h2>Developers</h2>
+    </div>
+    <ul>
+        {% for developer in developers%}
+      <li>
+        <div class="avatar">
+          <img src="{{developer.image.url}}" alt="Sana" />
+        </div>
+        <div class="info">
+          <h3>{{developer.name}}</h3>
+          <span>{{developer.designation}}</span>
+          <a href="{{developer.linkedin_id}}" class="button"
+            ><i class="fa-brands fa-linkedin-in"></i> Linkedin Profile</a
+          >
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% include 'web/includes/footer.html' %}
+
+{% endblock %}
